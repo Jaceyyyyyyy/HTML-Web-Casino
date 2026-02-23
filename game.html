@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0a0a0b">
     <title>SOVEREIGN | Ultra Casino Experience</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400  ;600;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
         
         :root {
             --bg-primary: #0a0a0b;
@@ -77,8 +77,8 @@
         .auth-input { width: 100%; padding: 18px 20px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: var(--text-primary); font-size: 16px; outline: none; transition: all 0.3s; }
         .auth-input:focus { border-color: var(--gold-primary); box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1); }
         .auth-input::placeholder { color: var(--text-muted); }
-        .captcha-box { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 15px; cursor: pointer; }
-        .captcha-checkbox { width: 24px; height: 24px; border: 2px solid var(--text-muted); border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .captcha-box { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 15px; }
+        .captcha-checkbox { width: 24px; height: 24px; border: 2px solid var(--text-muted); border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
         .captcha-checkbox.checked { background: var(--emerald-light); border-color: var(--emerald-light); }
         .captcha-text { font-size: 14px; color: var(--text-secondary); }
         .captcha-icon { margin-left: auto; font-size: 24px; opacity: 0.5; }
@@ -125,29 +125,6 @@
         .icon-btn.active { background: rgba(201, 162, 39, 0.2); border-color: var(--gold-primary); color: var(--gold-primary); }
         .icon-btn .badge { position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; background: var(--crimson); border-radius: 50%; font-size: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
 
-        /* Prominent Leaderboard Button */
-        .leaderboard-btn-prominent { 
-            width: auto !important; 
-            padding: 0 20px !important; 
-            background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(201, 162, 39, 0.05)) !important; 
-            border: 1px solid var(--gold-primary) !important; 
-            animation: leaderboard-pulse 2s infinite; 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            font-size: 14px; 
-            font-weight: 600; 
-            color: var(--gold-primary) !important;
-        }
-        @keyframes leaderboard-pulse { 
-            0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); } 
-            50% { box-shadow: 0 0 20px 5px rgba(201, 162, 39, 0.2); } 
-        }
-        .leaderboard-btn-prominent span:last-child { 
-            font-size: 13px; 
-            letter-spacing: 1px; 
-        }
-
         /* Account Modal */
         .account-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 1001; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
         .account-modal-overlay.visible { display: flex; opacity: 1; }
@@ -170,7 +147,7 @@
         .lifetime-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px; }
         .lifetime-stat { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
         .lifetime-stat-label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-        .lifetime-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; }
+        .lifetime-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; color: var(--gold-primary); }
         .lifetime-stat-value.negative { color: #e74c3c; }
         .lifetime-stat-value.positive { color: #2ecc71; }
 
@@ -391,7 +368,7 @@
         .num-green { background: linear-gradient(145deg, #27ae60, #1b4d3e); color: white; }
 
         .blackjack-table { width: 100%; max-width: 1200px; aspect-ratio: 16/9; background: linear-gradient(135deg, #1b4d3e 0%, #0f2e26 50%, #0a2520 100%); border-radius: 250px 250px 30px 30px; border: 20px solid #2c1810; box-shadow: inset 0 0 150px rgba(0,0,0,0.6), 0 40px 80px rgba(0,0,0,0.6), 0 0 0 10px rgba(139, 69, 19, 0.3); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 40px 80px; position: relative; }
-        .felt-texture { position: absolute; inset: 0; border-radius: 230px 230px 10px 10px; background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg  '%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23000' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; }
+        .felt-texture { position: absolute; inset: 0; border-radius: 230px 230px 10px 10px; background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23000' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.4; pointer-events: none; }
         .table-pattern { position: absolute; inset: 30px; border-radius: 220px 220px 20px 20px; border: 3px dashed rgba(255,255,255,0.08); pointer-events: none; }
 
         .all-in-circle-btn { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #e74c3c, #c0392b, #8b1538); border: 4px solid rgba(255,255,255,0.2); color: white; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 10px 40px rgba(139, 21, 56, 0.5), 0 0 60px rgba(231, 76, 60, 0.3), inset 0 5px 15px rgba(255,255,255,0.2), inset 0 -5px 15px rgba(0,0,0,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 50; }
@@ -402,11 +379,9 @@
         .all-in-circle-btn.centered { left: 50%; bottom: 50%; transform: translate(-50%, 50%) scale(1.3); animation: all-in-center 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
         @keyframes all-in-center { 0% { transform: translate(-50%, 0) scale(1); } 50% { transform: translate(-50%, 40%) scale(1.5); } 100% { transform: translate(-50%, 50%) scale(1.3); } }
 
-        .card { width: 90px; height: 126px; background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; box-shadow: 0 8px 20px rgba(0,0,0,0.4); position: relative; animation: deal-card 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
+        .card { width: 90px; height: 126px; background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; box-shadow: 0 8px 20px rgba(0,0,0,0.4); position: relative; animation: deal-card 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.1); }
         .card.red { color: #c0392b; }
         .card.black { color: #2c3e50; }
-        .card.held { border: 3px solid #2ecc71; transform: translateY(-10px); box-shadow: 0 0 20px rgba(46, 204, 113, 0.4); }
         .card-value { font-size: 28px; margin-bottom: 8px; }
         .card-suit { font-size: 40px; }
         .hand { display: flex; gap: 12px; z-index: 10; min-height: 140px; }
@@ -509,7 +484,7 @@
 
         @media (max-width: 1400px) { .games-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } }
         @media (max-width: 1200px) { .game-container { flex-direction: column; } .control-panel { width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); max-height: 45vh; } .stage { min-height: 55vh; } .stats-panel { width: 320px; right: 10px; } .leaderboard-panel { width: 280px; left: 10px; } .lifetime-stats { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .header { padding: 0 20px; height: 70px; } .brand-text { font-size: 20px; } .header-center { display: none; } .games-grid { grid-template-columns: 1fr; } .lobby { padding: 25px; } .mines-grid { grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 20px; } .mine-cell { width: 60px; height: 60px; font-size: 28px; } .blackjack-table { border-radius: 120px 120px 15px 15px; padding: 25px; border-width: 12px; } .card { width: 65px; height: 91px; } .card-value { font-size: 20px; } .card-suit { font-size: 28px; } .roulette-wheel-container { width: 300px; height: 300px; } .roulette-layout { grid-template-columns: repeat(13, 32px); gap: 2px; } .roulette-num { width: 32px; height: 32px; font-size: 11px; } .plinko-board { width: 100%; max-width: 500px; height: 500px; } .keno-grid { grid-template-columns: repeat(5, 1fr); max-width: 350px; padding: 20px; } .keno-cell { width: 50px; height: 50px; font-size: 14px; } .wheel-container { width: 350px; height: 350px; } .limbo-display { font-size: 80px; } .crash-graph { height: 400px; } .crash-multiplier { font-size: 60px; } .all-in-circle-btn { width: 80px; height: 80px; font-size: 12px; } .account-modal { padding: 20px; } .lifetime-stats { grid-template-columns: 1fr 1fr; } .leaderboard-btn-prominent span:last-child { display: none; } }
+        @media (max-width: 768px) { .header { padding: 0 20px; height: 70px; } .brand-text { font-size: 20px; } .header-center { display: none; } .games-grid { grid-template-columns: 1fr; } .lobby { padding: 25px; } .mines-grid { grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 20px; } .mine-cell { width: 60px; height: 60px; font-size: 28px; } .blackjack-table { border-radius: 120px 120px 15px 15px; padding: 25px; border-width: 12px; } .card { width: 65px; height: 91px; } .card-value { font-size: 20px; } .card-suit { font-size: 28px; } .roulette-wheel-container { width: 300px; height: 300px; } .roulette-layout { grid-template-columns: repeat(13, 32px); gap: 2px; } .roulette-num { width: 32px; height: 32px; font-size: 11px; } .plinko-board { width: 100%; max-width: 500px; height: 500px; } .keno-grid { grid-template-columns: repeat(5, 1fr); max-width: 350px; padding: 20px; } .keno-cell { width: 50px; height: 50px; font-size: 14px; } .wheel-container { width: 350px; height: 350px; } .limbo-display { font-size: 80px; } .crash-graph { height: 400px; } .crash-multiplier { font-size: 60px; } .all-in-circle-btn { width: 80px; height: 80px; font-size: 12px; } .account-modal { padding: 20px; } .lifetime-stats { grid-template-columns: 1fr 1fr; } }
 
         .win-celebration { position: fixed; inset: 0; pointer-events: none; z-index: 5000; display: none; }
         .win-celebration.active { display: block; }
@@ -622,10 +597,7 @@
                     </div>
                 </div>
                 <button class="icon-btn" onclick="toggleStats()" id="statsBtn">📊</button>
-                <button class="icon-btn leaderboard-btn-prominent" onclick="toggleLeaderboard()" id="leaderboardBtn">
-                    <span>🏆</span>
-                    <span>Leaderboard</span>
-                </button>
+                <button class="icon-btn" onclick="toggleLeaderboard()" id="leaderboardBtn">🏆</button>
                 <button class="icon-btn" onclick="toggleChat()" id="chatBtn">💬<span class="badge" id="chatBadge">3</span></button>
                 <button class="icon-btn" onclick="toggleSound()" id="soundBtn">🔊</button>
                 <button class="icon-btn" onclick="toggleSettings()">⚙️</button>
@@ -1201,28 +1173,28 @@
             captchaVerified: false,
             
             init() {
-                try {
-                    const saved = localStorage.getItem('sovereign_user');
-                    if (saved) {
-                        this.currentUser = JSON.parse(saved);
-                        // Validate data to prevent NaN issues
-                        if (!this.currentUser || typeof this.currentUser !== 'object') {
-                            throw new Error('Invalid user data');
-                        }
-                        if (typeof this.currentUser.balance !== 'number' || isNaN(this.currentUser.balance)) {
-                            this.currentUser.balance = 10000;
-                        }
-                        if (typeof this.currentUser.xp !== 'number' || isNaN(this.currentUser.xp)) {
-                            this.currentUser.xp = 0;
-                        }
-                        this.migrateUserData();
-                        this.onLogin();
-                    }
-                } catch (e) {
-                    console.error('Auth init error:', e);
-                    localStorage.removeItem('sovereign_user');
-                    this.currentUser = null;
+                const saved = localStorage.getItem('sovereign_user');
+                if (saved) {
+                    this.currentUser = JSON.parse(saved);
+                    this.migrateUserData();
+                    this.onLogin();
                 }
+            },
+            
+            migrateUserData() {
+                // Ensure new fields exist
+                if (!this.currentUser.xp) this.currentUser.xp = 0;
+                if (!this.currentUser.lifetimeStats) {
+                    this.currentUser.lifetimeStats = {
+                        wagered: 0,
+                        profit: 0,
+                        wins: 0,
+                        losses: 0,
+                        totalBets: 0
+                    };
+                }
+                if (!this.currentUser.betHistory) this.currentUser.betHistory = [];
+                this.saveUser();
             },
             
             switchTab(tab) {
@@ -1315,11 +1287,6 @@
                 UI.updateLevelDisplay();
                 Chat.init();
                 Leaderboard.init();
-                // Auto-open leaderboard on first load for visibility
-                if (!localStorage.getItem('leaderboard_seen')) {
-                    setTimeout(() => toggleLeaderboard(), 1000);
-                    localStorage.setItem('leaderboard_seen', 'true');
-                }
             },
             
             logout() {
@@ -1358,26 +1325,8 @@
             rainUsers: [],
             
             updateBalance(amount) {
-                // Guard against NaN/undefined amounts
-                if (isNaN(amount) || amount === undefined || amount === null) {
-                    console.error('Invalid amount passed to updateBalance:', amount);
-                    return false;
-                }
-                
-                const parsedAmount = parseFloat(amount);
-                if (isNaN(parsedAmount)) {
-                    console.error('Amount parsed to NaN:', amount);
-                    return false;
-                }
-                
-                const currentBalance = parseFloat(Auth.currentUser ? Auth.currentUser.balance : this.balance) || 0;
-                const newBalance = currentBalance + parsedAmount;
-                
-                // Guard against NaN result
-                if (isNaN(newBalance)) {
-                    console.error('Balance calculation resulted in NaN');
-                    return false;
-                }
+                const oldBalance = Auth.currentUser ? Auth.currentUser.balance : this.balance;
+                const newBalance = oldBalance + amount;
                 
                 if (Auth.currentUser) {
                     Auth.currentUser.balance = newBalance;
@@ -1388,10 +1337,9 @@
                 
                 UI.updateBalance();
                 
-                if (parsedAmount > 0 && parsedAmount > currentBalance * 0.5) {
-                    showWinCelebration('BIG WIN!', formatCurrency(parsedAmount));
+                if (amount > 0 && amount > oldBalance * 0.5) {
+                    showWinCelebration('BIG WIN!', formatCurrency(amount));
                 }
-                return true;
             },
             
             recordBet(game, betAmount, payout) {
@@ -1468,13 +1416,7 @@
         // ============================================
         const UI = {
             updateBalance() {
-                let balance = Auth.currentUser ? Auth.currentUser.balance : State.balance;
-                // Fix for NaN/undefined
-                if (isNaN(balance) || balance === undefined || balance === null) {
-                    balance = 10000; // Reset to default
-                    if (Auth.currentUser) Auth.currentUser.balance = balance;
-                    else State.balance = balance;
-                }
+                const balance = Auth.currentUser ? Auth.currentUser.balance : State.balance;
                 document.getElementById('balanceDisplay').textContent = formatCurrency(balance);
             },
             
@@ -1551,7 +1493,7 @@
         // FORMATTING UTILITIES
         // ============================================
         function formatCurrency(amount) {
-            if (amount === undefined || amount === null || isNaN(amount)) return '$0.00';
+            if (amount === undefined || amount === null) return '$0.00';
             const absAmount = Math.abs(amount);
             if (absAmount >= 1000000) return '$' + (amount / 1000000).toFixed(2) + 'M';
             if (absAmount >= 1000) return '$' + (amount / 1000).toFixed(2) + 'K';
@@ -1618,31 +1560,22 @@
             }
             
             placeBet(amount) {
-                // Validate amount is a valid number
-                const parsedAmount = parseFloat(amount);
-                if (isNaN(parsedAmount) || parsedAmount === undefined || parsedAmount === null) {
-                    Toast.show('Please enter a valid bet amount', 'error');
+                const balance = Auth.currentUser ? Auth.currentUser.balance : State.balance;
+                if (amount > balance) {
+                    Toast.show('Insufficient balance', 'error');
                     return false;
                 }
-                
-                if (parsedAmount <= 0) {
-                    Toast.show('Bet amount must be greater than 0', 'error');
+                if (amount <= 0) {
+                    Toast.show('Invalid bet amount', 'error');
                     return false;
                 }
-                
-                if (parsedAmount > 1000000) {
+                if (amount > 1000000) {
                     Toast.show('Maximum bet is $1,000,000', 'error');
                     return false;
                 }
                 
-                const balance = parseFloat(Auth.currentUser ? Auth.currentUser.balance : State.balance) || 0;
-                if (parsedAmount > balance) {
-                    Toast.show('Insufficient balance', 'error');
-                    return false;
-                }
-                
-                this.betAmount = parsedAmount;
-                State.updateBalance(-parsedAmount);
+                this.betAmount = amount;
+                State.updateBalance(-amount);
                 return true;
             }
             
@@ -1806,18 +1739,10 @@
             async action() {
                 if (this.isPlaying) {
                     this.cashout();
-                    return;
-                }
-                
-                const inputVal = document.getElementById('betInput').value;
-                const amount = parseFloat(inputVal);
-                
-                if (isNaN(amount) || inputVal === '' || inputVal === null) {
-                    Toast.show('Please enter a valid bet amount', 'error');
-                    return;
-                }
-                
-                if (!this.placeBet(amount)) return;                    
+                } else {
+                    const amount = parseFloat(document.getElementById('betInput').value);
+                    if (!this.placeBet(amount)) return;
+                    
                     this.isPlaying = true;
                     this.cashedOut = false;
                     this.multiplier = 1;
@@ -1844,7 +1769,7 @@
                     
                     this.startGame();
                 }
-            
+            }
             
             startGame() {
                 const startTime = Date.now();
@@ -2587,8 +2512,7 @@
                 
                 for (const suit of suits) {
                     for (const value of values) {
-                        let num = values.indexOf(value) + 2;
-                        this.deck.push({ suit, value, num });
+                        this.deck.push({ suit, value, num: values.indexOf(value) + 2 });
                     }
                 }
                 
@@ -3461,6 +3385,7 @@
             reset() {
                 this.level = 0;
                 this.tower = [];
+                document.getElementById('towerStack').innerHTML = '';
                 document.getElementById('towerLevel2').textContent = '1';
                 document.getElementById('towerMult2').textContent = '1.00×';
             }
@@ -4382,7 +4307,6 @@
                 this.deck = [];
                 this.hand = [];
                 this.held = [];
-                this.hasDrawn = false;
             }
             
             getHouseEdge() { return 7; }
@@ -4393,7 +4317,7 @@
                         ${this.getControlTemplate()}
                         <div class="panel-section">
                             <div class="section-label">Click cards to HOLD</div>
-                            <button class="action-btn secondary" id="drawBtn" onclick="Games.current.draw()" disabled>DRAW</button>
+                            <button class="action-btn secondary" onclick="Games.current.draw()">DRAW</button>
                         </div>
                         <div class="panel-section" style="font-size: 12px;">
                             <div><strong>Paytable:</strong></div>
@@ -4417,10 +4341,6 @@
                 `;
                 
                 this.resetDeck();
-                // Reset state
-                this.hand = [];
-                this.held = [];
-                this.hasDrawn = false;
             }
             
             resetDeck() {
@@ -4435,7 +4355,6 @@
                     }
                 }
                 
-                // Fisher-Yates shuffle
                 for (let i = this.deck.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
@@ -4443,26 +4362,22 @@
             }
             
             async action() {
-                // Handle NEW HAND button
-                if (this.hasDrawn) {
-                    this.reset();
-                    return;
+                if (this.hand.length > 0) {
+                    // New hand
+                    this.hand = [];
+                    this.held = [];
+                    document.getElementById('pokerResult').textContent = '';
                 }
-                
-                // Handle DEAL button
-                if (this.hand.length > 0) return; // Already dealing
                 
                 const amount = parseFloat(document.getElementById('betInput').value);
                 if (!this.placeBet(amount)) return;
                 
                 document.getElementById('actionBtn').disabled = true;
-                document.getElementById('drawBtn').disabled = false;
-                document.getElementById('pokerResult').textContent = '';
+                document.getElementById('actionBtn').textContent = 'DEAL';
                 
                 // Deal 5 cards
                 this.hand = [this.deck.pop(), this.deck.pop(), this.deck.pop(), this.deck.pop(), this.deck.pop()];
                 this.held = [false, false, false, false, false];
-                this.hasDrawn = false;
                 
                 this.displayHand();
             }
@@ -4475,27 +4390,24 @@
                     const isRed = card.suit === '♥' || card.suit === '♦';
                     const div = document.createElement('div');
                     div.className = `card ${isRed ? 'red' : 'black'} ${this.held[i] ? 'held' : ''}`;
+                    div.style.cssText = this.held[i] ? 'border: 3px solid #2ecc71; transform: translateY(-10px);' : '';
                     div.innerHTML = `
                         <div class="card-value">${card.value}</div>
                         <div class="card-suit">${card.suit}</div>
                     `;
-                    // Bind click handler with proper 'this' context
-                    div.onclick = (e) => {
-                        e.stopPropagation();
-                        this.toggleHold(i);
-                    };
+                    div.onclick = () => this.toggleHold(i);
                     container.appendChild(div);
                 });
             }
             
             toggleHold(index) {
-                if (this.hand.length !== 5 || this.hasDrawn) return;
+                if (this.hand.length !== 5) return;
                 this.held[index] = !this.held[index];
                 this.displayHand();
             }
             
             draw() {
-                if (this.hand.length !== 5 || this.hasDrawn) return;
+                if (this.hand.length !== 5) return;
                 
                 // Replace non-held cards
                 for (let i = 0; i < 5; i++) {
@@ -4504,13 +4416,11 @@
                     }
                 }
                 
-                this.hasDrawn = true;
                 this.displayHand();
                 this.evaluate();
                 
                 document.getElementById('actionBtn').disabled = false;
                 document.getElementById('actionBtn').textContent = 'NEW HAND';
-                document.getElementById('drawBtn').disabled = true;
             }
             
             evaluate() {
@@ -4572,17 +4482,6 @@
                     this.loss();
                     document.getElementById('pokerResult').style.color = '#e74c3c';
                 }
-            }
-            
-            reset() {
-                this.hand = [];
-                this.held = [];
-                this.hasDrawn = false;
-                document.getElementById('pokerHand').innerHTML = '';
-                document.getElementById('pokerResult').textContent = '';
-                document.getElementById('actionBtn').textContent = 'DEAL';
-                document.getElementById('actionBtn').disabled = false;
-                document.getElementById('drawBtn').disabled = true;
             }
         }
 
@@ -5112,1693 +5011,8 @@
                 statsPanel.style.right = 'auto';
             });
             
-                        document.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-            
-            // Touch support for mobile dragging
-            statsPanel.addEventListener('touchstart', (e) => {
-                if (e.target.closest('.stats-close')) return;
-                isDragging = true;
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                initialLeft = statsPanel.offsetLeft;
-                initialTop = statsPanel.offsetTop;
-            });
-            
-            document.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                statsPanel.style.left = (initialLeft + e.touches[0].clientX - startX) + 'px';
-                statsPanel.style.top = (initialTop + e.touches[0].clientY - startY) + 'px';
-                statsPanel.style.right = 'auto';
-            });
-            
-            document.addEventListener('touchend', () => {
-                isDragging = false;
-            });
-        };
-
-        // ============================================
-        // THEME MANAGER
-        // ============================================
-        const ThemeManager = {
-            current: 'default',
-            themes: {
-                default: {
-                    '--bg-primary': '#0a0a0b',
-                    '--bg-secondary': '#141416',
-                    '--gold-primary': '#c9a227',
-                    '--gold-light': '#e5c158',
-                    '--gold-dark': '#8b6914',
-                    '--crimson': '#8b1538',
-                    '--emerald': '#1b4d3e'
-                },
-                gold: {
-                    '--bg-primary': '#0a0805',
-                    '--bg-secondary': '#1a1410',
-                    '--gold-primary': '#ffd700',
-                    '--gold-light': '#ffed4e',
-                    '--gold-dark': '#b8860b',
-                    '--crimson': '#8b4513',
-                    '--emerald': '#556b2f'
-                },
-                crimson: {
-                    '--bg-primary': '#0f0205',
-                    '--bg-secondary': '#1a0508',
-                    '--gold-primary': '#ff1744',
-                    '--gold-light': '#ff5252',
-                    '--gold-dark': '#b71c1c',
-                    '--crimson': '#880e4f',
-                    '--emerald': '#4a148c'
-                },
-                midnight: {
-                    '--bg-primary': '#000428',
-                    '--bg-secondary': '#004e92',
-                    '--gold-primary': '#00d2ff',
-                    '--gold-light': '#3a7bd5',
-                    '--gold-dark': '#00a8cc',
-                    '--crimson': '#ff006e',
-                    '--emerald': '#8338ec'
-                }
-            },
-            
-            setTheme(themeName) {
-                if (!this.themes[themeName]) return;
-                this.current = themeName;
-                const root = document.documentElement;
-                const theme = this.themes[themeName];
-                
-                for (const [key, value] of Object.entries(theme)) {
-                    root.style.setProperty(key, value);
-                }
-                
-                localStorage.setItem('sovereign_theme', themeName);
-            },
-            
-            loadSaved() {
-                const saved = localStorage.getItem('sovereign_theme');
-                if (saved && this.themes[saved]) {
-                    this.setTheme(saved);
-                }
-            }
-        };
-
-        // ============================================
-        // BADGE SYSTEM
-        // ============================================
-        const BadgeSystem = {
-            badges: {
-                whale: { icon: '🐋', name: 'Whale', desc: 'Balance over $1M', check: () => (Auth.currentUser?.balance || 0) >= 1000000 },
-                highroller: { icon: '🎲', name: 'High Roller', desc: 'Bet over $100k in one game', check: () => State.sessionStats.wagered >= 100000 },
-                lucky: { icon: '🍀', name: 'Lucky Charm', desc: 'Win 10x or higher', check: () => false }, // Checked on win
-                veteran: { icon: '⚔️', name: 'Veteran', desc: 'Play 100 games', check: () => State.sessionStats.totalBets >= 100 },
-                dragonSlayer: { icon: '🐉', name: 'Dragon Slayer', desc: 'Beat Dragon Tower', check: () => false },
-                goldMember: { icon: '👑', name: 'Gold Member', desc: 'Purchased Gold Theme', check: () => Shop.purchases.includes('theme_gold') }
-            },
-            
-            unlocked: [],
-            
-            checkBadges() {
-                for (const [id, badge] of Object.entries(this.badges)) {
-                    if (!this.unlocked.includes(id) && badge.check()) {
-                        this.unlock(id);
-                    }
-                }
-            },
-            
-            unlock(id) {
-                this.unlocked.push(id);
-                Toast.show(`Unlocked Badge: ${this.badges[id].name}!`, 'success');
-                UI.updateBadges();
-            },
-            
-            getUnlocked() {
-                return this.unlocked.map(id => ({ id, ...this.badges[id] }));
-            }
-        };
-
-        // ============================================
-        // SHOP SYSTEM
-        // ============================================
-        const Shop = {
-            purchases: JSON.parse(localStorage.getItem('sovereign_purchases') || '[]'),
-            
-            items: [
-                { id: 'theme_gold', name: 'Gold Theme', price: 50000, type: 'theme', value: 'gold', icon: '🌟' },
-                { id: 'theme_crimson', name: 'Crimson Night', price: 25000, type: 'theme', value: 'crimson', icon: '🌙' },
-                { id: 'theme_midnight', name: 'Midnight Blue', price: 100000, type: 'theme', value: 'midnight', icon: '🌊' },
-                { id: 'badge_custom', name: 'Custom Flair', price: 10000, type: 'badge', value: 'flair', icon: '✨' },
-                { id: 'stats_pro', name: 'Pro Stats Tracker', price: 5000, type: 'upgrade', value: 'pro_stats', icon: '📊' }
-            ],
-            
-            buy(itemId) {
-                const item = this.items.find(i => i.id === itemId);
-                if (!item) return;
-                
-                if (this.purchases.includes(itemId)) {
-                    Toast.show('Already owned!', 'error');
-                    return;
-                }
-                
-                const balance = Auth.currentUser ? Auth.currentUser.balance : State.balance;
-                if (balance < item.price) {
-                    Toast.show('Insufficient balance!', 'error');
-                    return;
-                }
-                
-                State.updateBalance(-item.price);
-                this.purchases.push(itemId);
-                localStorage.setItem('sovereign_purchases', JSON.stringify(this.purchases));
-                
-                if (item.type === 'theme') {
-                    ThemeManager.setTheme(item.value);
-                }
-                
-                Toast.show(`Purchased ${item.name}!`, 'success');
-                BadgeSystem.checkBadges();
-            },
-            
-            isOwned(itemId) {
-                return this.purchases.includes(itemId);
-            }
-        };
-
-        // ============================================
-        // FIXED CHAT SYSTEM WITH CUSTOM NAMES
-        // ============================================
-        const Chat = {
-            messages: [],
-            botNames: ['Joshua Bailey', 'Willy', 'Ralz Gaming', 'Monkey', 'Backcracker223', 'xX_DarkShadow_Xx', 'LuckyLoser', 'AllInAndy', 'BassDrop', 'CryptoNewb', 'MommasBoy', 'RustGamer', 'PoggersOnly', 'Frogger', 'SlotSloth'],
-            botMessages: [
-                'Just hit 100x on Crash! Poggers 🚀',
-                'Anyone got extra for Mines?',
-                'Nice rain earlier! Thanks Joshua Bailey',
-                'Lost it all... F in chat',
-                'Roulette is rigged I swear',
-                'Just claimed the bonus, time to yolo',
-                'GL everyone! Except Willy',
-                'Backcracker223 more like Brokecracker amirite',
-                'When is the next bonus?',
-                'Huff & Puff is printing today',
-                'Monkey bet it all and won!',
-                'Ralz Gaming is on fire 🔥'
-            ],
-            
-            init() {
-                this.addMessage('System', 'Welcome to Sovereign! Play responsibly. Type /help for commands.', true);
-                
-                // Random initial messages
-                setTimeout(() => this.botMessage(), 2000);
-                setInterval(() => this.botMessage(), 12000);
-                
-                // Generate rain periodically
-                setInterval(() => this.generateRain(), 300000);
-            },
-            
-            addMessage(username, message, isSystem = false) {
-                const container = document.getElementById('chatMessages');
-                const msg = document.createElement('div');
-                msg.className = 'chat-message';
-                if (isSystem) msg.style.background = 'rgba(201, 162, 39, 0.2)';
-                
-                // Color code usernames
-                let usernameColor = 'var(--gold-primary)';
-                if (username === 'Joshua Bailey') usernameColor = '#ff6b6b';
-                if (username === 'Willy') usernameColor = '#4ecdc4';
-                if (username === 'Monkey') usernameColor = '#95e1d3';
-                
-                msg.innerHTML = `
-                    <div class="chat-username" style="color: ${usernameColor}">${username}</div>
-                    <div>${message}</div>
-                `;
-                
-                container.appendChild(msg);
-                container.scrollTop = container.scrollHeight;
-                
-                if (!document.getElementById('chatPanel').classList.contains('visible')) {
-                    const badge = document.getElementById('chatBadge');
-                    badge.textContent = parseInt(badge.textContent) + 1;
-                }
-            },
-            
-            botMessage() {
-                const name = this.botNames[Math.floor(Math.random() * this.botNames.length)];
-                const msg = this.botMessages[Math.floor(Math.random() * this.botMessages.length)];
-                this.addMessage(name, msg);
-            },
-            
-            send() {
-                const input = document.getElementById('chatInput');
-                const msg = input.value.trim();
-                if (!msg) return;
-                
-                if (msg === '/help') {
-                    this.addMessage('System', 'Commands: /rain (check rain), /stats (session stats), /theme (change theme)', true);
-                    input.value = '';
-                    return;
-                }
-                
-                const username = Auth.currentUser ? Auth.currentUser.username : 'Guest';
-                this.addMessage(username, msg);
-                input.value = '';
-            },
-            
-            generateRain() {
-                State.rainAmount = Math.floor(Math.random() * 500) + 100;
-                document.getElementById('rainAmount').textContent = formatCurrency(State.rainAmount);
-                
-                Toast.show(`🌧️ Rain alert! ${formatCurrency(State.rainAmount)} available!`, 'info');
-                
-                const rainMsg = document.createElement('div');
-                rainMsg.className = 'chat-message chat-rain';
-                rainMsg.innerHTML = `
-                    <div class="rain-amount">🌧️ ${formatCurrency(State.rainAmount)} RAIN!</div>
-                    <div style="font-size: 12px;">Click the rain banner to claim</div>
-                `;
-                document.getElementById('chatMessages').appendChild(rainMsg);
-            },
-            
-            claimRain() {
-                if (State.rainAmount === 0) {
-                    Toast.show('No rain active', 'error');
-                    return;
-                }
-                
-                State.updateBalance(State.rainAmount);
-                Toast.show(`Claimed ${formatCurrency(State.rainAmount)} from rain!`, 'success');
-                State.rainAmount = 0;
-                document.getElementById('rainAmount').textContent = '$0.00';
-            }
-        };
-
-        // ============================================
-        // FIXED LEADERBOARD WITH CUSTOM NAMES
-        // ============================================
-        const Leaderboard = {
-            entries: [],
-            
-            init() {
-                this.generateEntries();
-                this.updateTimer();
-                setInterval(() => this.updateTimer(), 1000);
-                setInterval(() => this.generateEntries(), 30000);
-            },
-            
-            generateEntries() {
-                const names = ['Joshua Bailey', 'Willy', 'Ralz Gaming', 'Monkey', 'Backcracker223', 'WhaleAlert', 'HighRoller99', 'LuckyStreak', 'MoonBoy', 'DiamondHands'];
-                const shuffled = names.sort(() => 0.5 - Math.random()).slice(0, 5);
-                
-                this.entries = shuffled.map((name, i) => ({
-                    username: name,
-                    profit: Math.floor(Math.random() * 80000) + 5000,
-                    rank: i + 1,
-                    avatar: name.charAt(0).toUpperCase()
-                })).sort((a, b) => b.profit - a.profit);
-                
-                this.render();
-            },
-            
-            render() {
-                const container = document.getElementById('leaderboardList');
-                if (!container) return;
-                
-                container.innerHTML = this.entries.map(e => `
-                    <div class="leaderboard-entry">
-                        <div class="leaderboard-rank rank-${e.rank <= 3 ? e.rank : 'other'}">${e.rank}</div>
-                        <div class="leaderboard-user">
-                            <div class="leaderboard-username">${e.username}</div>
-                        </div>
-                        <div class="leaderboard-profit">+${formatCurrency(e.profit)}</div>
-                    </div>
-                `).join('');
-            },
-            
-            updateTimer() {
-                const now = new Date();
-                const endOfHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0);
-                const diff = Math.floor((endOfHour - now) / 1000);
-                
-                const mins = Math.floor(diff / 60).toString().padStart(2, '0');
-                const secs = (diff % 60).toString().padStart(2, '0');
-                
-                const timerEl = document.getElementById('challengeTimer');
-                if (timerEl) timerEl.textContent = `${mins}:${secs}`;
-            }
-        };
-
-        // ============================================
-        // HUFF & PUFF SLOTS (Construction Theme)
-        // ============================================
-        class HuffPuffGame extends BaseGame {
-            constructor() {
-                super('Huff & Puff');
-                this.rows = 4;
-                this.reels = 5;
-                this.symbols = ['👷', '🪖', '🔨', '🧱', '🏗️', '📋', '⚠️', '💰']; // Hard hat, helmet, hammer, brick, crane, blueprint, cone, cash
-                this.values = { '👷': 0, '🪖': 10, '🔨': 5, '🧱': 3, '🏗️': 8, '📋': 4, '⚠️': 2, '💰': 15 };
-                this.grid = [];
-                this.bonusActive = false;
-                this.freeSpins = 0;
-                this.stickySymbols = [];
-            }
-            
-            getHouseEdge() { return 12; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        ${this.getControlTemplate()}
-                        <div class="panel-section">
-                            <div class="section-label">Free Spins: <span id="freeSpins" class="text-gold">0</span></div>
-                            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">
-                                Land 6+ 🪖 (Hard Hats) for Bonus
-                            </div>
-                        </div>
-                    </div>
-                    <div class="stage">
-                        <div class="huff-puff-container" style="background: linear-gradient(180deg, #2a2a2e 0%, #1c1c1f 100%); padding: 30px; border-radius: 20px; border: 4px solid var(--gold-primary); box-shadow: 0 0 60px rgba(201, 162, 39, 0.25);">
-                            <div style="text-align: center; margin-bottom: 20px; font-family: Cinzel; color: var(--gold-primary); font-size: 24px; letter-spacing: 2px;">
-                                HUFF & PUFF <span style="font-size: 14px; color: var(--text-secondary);">1024 WAYS</span>
-                            </div>
-                            <div class="huff-grid" id="huffGrid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; background: #0a0a0b; padding: 20px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1);"></div>
-                            <div id="huffResult" style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: 600; min-height: 30px;"></div>
-                            <div id="bonusIndicator" style="display: none; text-align: center; margin-top: 10px; padding: 10px; background: rgba(201, 162, 39, 0.2); border-radius: 8px; color: var(--gold-primary);">
-                                🪖 BONUS ACTIVE - Collect Hard Hats!
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                this.createGrid();
-            }
-            
-            createGrid() {
-                const grid = document.getElementById('huffGrid');
-                grid.innerHTML = '';
-                this.grid = [];
-                
-                for (let r = 0; r < this.rows; r++) {
-                    const row = [];
-                    for (let c = 0; c < this.reels; c++) {
-                        const cell = document.createElement('div');
-                        cell.className = 'huff-cell';
-                        cell.dataset.row = r;
-                        cell.dataset.col = c;
-                        cell.style.cssText = 'width: 80px; height: 80px; background: linear-gradient(145deg, #1a1a1e, #0f0f11); border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 40px; transition: all 0.3s;';
-                        grid.appendChild(cell);
-                        row.push(cell);
-                    }
-                    this.grid.push(row);
-                }
-            }
-            
-            async spin() {
-                const amount = parseFloat(document.getElementById('betInput').value);
-                if (!this.placeBet(amount)) return;
-                
-                document.getElementById('actionBtn').disabled = true;
-                document.getElementById('huffResult').textContent = '';
-                
-                // Generate results (weighted)
-                const results = [];
-                let hardHatCount = 0;
-                
-                for (let r = 0; r < this.rows; r++) {
-                    const row = [];
-                    for (let c = 0; c < this.reels; c++) {
-                        // Weighted random - hard hats are rare (bonus symbols)
-                        const rand = await this.getRandom();
-                        let symbol;
-                        if (rand < 0.08) {
-                            symbol = '🪖'; // Hard hat - 8% chance
-                            hardHatCount++;
-                        } else if (rand < 0.15) {
-                            symbol = '👷'; // Worker - 7%
-                        } else if (rand < 0.25) {
-                            symbol = '💰'; // Cash - 10%
-                        } else if (rand < 0.40) {
-                            symbol = '🏗️'; // Crane - 15%
-                        } else if (rand < 0.55) {
-                            symbol = '🔨'; // Hammer - 15%
-                        } else if (rand < 0.70) {
-                            symbol = '📋'; // Blueprint - 15%
-                        } else if (rand < 0.85) {
-                            symbol = '🧱'; // Brick - 15%
-                        } else {
-                            symbol = '⚠️'; // Cone - 15%
-                        }
-                        row.push(symbol);
-                    }
-                    results.push(row);
-                }
-                
-                // Animate
-                for (let c = 0; c < this.reels; c++) {
-                    setTimeout(() => {
-                        for (let r = 0; r < this.rows; r++) {
-                            this.animateCell(this.grid[r][c], results[r][c]);
-                        }
-                    }, c * 200);
-                }
-                
-                setTimeout(() => {
-                    this.resolveSpin(results, hardHatCount);
-                }, 1500);
-            }
-            
-            animateCell(cell, finalSymbol) {
-                let spins = 0;
-                const interval = setInterval(() => {
-                    cell.textContent = this.symbols[Math.floor(Math.random() * this.symbols.length)];
-                    spins++;
-                    if (spins > 10) {
-                        clearInterval(interval);
-                        cell.textContent = finalSymbol;
-                        if (finalSymbol === '🪖') {
-                            cell.style.background = 'rgba(201, 162, 39, 0.3)';
-                            cell.style.borderColor = 'var(--gold-primary)';
-                        } else {
-                            cell.style.background = 'linear-gradient(145deg, #1a1a1e, #0f0f11)';
-                            cell.style.borderColor = 'rgba(255,255,255,0.1)';
-                        }
-                    }
-                }, 50);
-            }
-            
-            resolveSpin(results, hardHatCount) {
-                // Check for 6+ hard hats (bonus trigger)
-                if (hardHatCount >= 6 || this.bonusActive) {
-                    if (!this.bonusActive) {
-                        this.bonusActive = true;
-                        this.freeSpins = 3;
-                        document.getElementById('bonusIndicator').style.display = 'block';
-                        Toast.show('🪖 HUFF & PUFF BONUS TRIGGERED!', 'success');
-                    }
-                    
-                    this.handleBonus(results);
-                    return;
-                }
-                
-                // Calculate wins (1024 ways - left to right matching)
-                let totalWin = 0;
-                const betPerWay = this.betAmount / 1024;
-                
-                // Check each way (simplified - checking consecutive matches)
-                for (let way = 0; way < 1024; way++) {
-                    // Convert way number to positions (0-3 for each reel)
-                    const positions = way.toString(4).padStart(5, '0').split('').map(Number);
-                    const symbols = positions.map((p, i) => results[p][i]);
-                    
-                    // Check if all match (simplified win condition)
-                    if (symbols.every(s => s === symbols[0] && s !== '🪖')) {
-                        const symbol = symbols[0];
-                        const multiplier = this.values[symbol] || 1;
-                        totalWin += betPerWay * multiplier * 1024; // Scale back up
-                    }
-                }
-                
-                if (totalWin > 0) {
-                    this.win(totalWin);
-                    document.getElementById('huffResult').textContent = `WIN! ${formatCurrency(totalWin)}`;
-                    document.getElementById('huffResult').style.color = '#2ecc71';
-                } else {
-                    this.loss();
-                    document.getElementById('huffResult').textContent = 'No Win';
-                    document.getElementById('huffResult').style.color = 'var(--text-secondary)';
-                }
-                
-                document.getElementById('actionBtn').disabled = false;
-            }
-            
-            handleBonus(results) {
-                this.freeSpins--;
-                document.getElementById('freeSpins').textContent = this.freeSpins;
-                
-                // In bonus, hard hats stick and have credit values
-                let bonusWin = 0;
-                for (let r = 0; r < this.rows; r++) {
-                    for (let c = 0; c < this.reels; c++) {
-                        if (results[r][c] === '🪖') {
-                            const credit = Math.floor(Math.random() * 50) + 10;
-                            bonusWin += credit * (this.betAmount / 100);
-                            this.grid[r][c].innerHTML = '🪖<div style="font-size: 12px; color: var(--gold-primary);">$${credit}</div>';
-                        }
-                    }
-                }
-                
-                if (bonusWin > 0) {
-                    State.updateBalance(bonusWin);
-                    document.getElementById('huffResult').textContent = `BONUS WIN! ${formatCurrency(bonusWin)}`;
-                }
-                
-                if (this.freeSpins <= 0) {
-                    this.bonusActive = false;
-                    document.getElementById('bonusIndicator').style.display = 'none';
-                    Toast.show('Bonus Complete!', 'info');
-                    document.getElementById('actionBtn').disabled = false;
-                } else {
-                    setTimeout(() => this.spin(), 2000); // Auto-spin in bonus
-                }
-            }
-            
-            action() {
-                if (this.bonusActive) return;
-                this.spin();
-            }
-        }
-
-        // ============================================
-        // FIXED PLINKO (Harder to win high multis)
-        // ============================================
-        class PlinkoGame extends BaseGame {
-            constructor() {
-                super('Plinko');
-                this.rows = 16;
-                // Much harder distribution - extreme values are much rarer
-                this.multipliers = [1000, 130, 26, 9, 4, 2, 0.2, 0.2, 0.2, 0.2, 2, 4, 9, 26, 130, 1000];
-                this.weights = [0.001, 0.005, 0.02, 0.08, 0.15, 0.25, 0.268, 0.268, 0.268, 0.268, 0.25, 0.15, 0.08, 0.02, 0.005, 0.001]; // Weighted toward center (0.2x)
-            }
-            
-            getHouseEdge() { return 8; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        ${this.getControlTemplate()}
-                        <div class="panel-section">
-                            <div class="section-label">Risk Level</div>
-                            <select class="bet-input" id="riskLevel" onchange="Games.current.updateRisk()">
-                                <option value="low">Low (Safe)</option>
-                                <option value="medium" selected>Medium (Balanced)</option>
-                                <option value="high">High (Volatile)</option>
-                            </select>
-                        </div>
-                        <div class="panel-section">
-                            <div class="section-label">Rows: <span id="rowsDisplay">16</span></div>
-                            <input type="range" class="range-slider" id="rowsSlider" min="8" max="16" value="16" oninput="Games.current.updateRows(this.value)">
-                        </div>
-                    </div>
-                    <div class="stage">
-                        <div class="plinko-board">
-                            <canvas class="plinko-canvas" id="plinkoCanvas" width="750" height="620"></canvas>
-                            <div class="plinko-slots" id="plinkoSlots"></div>
-                        </div>
-                    </div>
-                `;
-                
-                this.canvas = document.getElementById('plinkoCanvas');
-                this.ctx = this.canvas.getContext('2d');
-                this.updateSlots();
-                this.drawBoard();
-            }
-            
-            updateRisk() {
-                const risk = document.getElementById('riskLevel').value;
-                if (risk === 'low') {
-                    this.multipliers = [16, 9, 2, 1.4, 1.4, 1.2, 0.5, 0.5, 0.5, 0.5, 1.2, 1.4, 1.4, 2, 9, 16];
-                    this.weights = [0.001, 0.01, 0.05, 0.12, 0.20, 0.25, 0.269, 0.269, 0.269, 0.269, 0.25, 0.20, 0.12, 0.05, 0.01, 0.001];
-                } else if (risk === 'medium') {
-                    this.multipliers = [110, 41, 10, 5, 3, 1.5, 1, 0.5, 1, 1.5, 3, 5, 10, 41, 110, 1000];
-                    this.weights = [0.0005, 0.002, 0.015, 0.06, 0.12, 0.20, 0.2425, 0.2425, 0.2425, 0.2425, 0.20, 0.12, 0.06, 0.015, 0.002, 0.0005];
-                } else {
-                    this.multipliers = [1000, 130, 26, 9, 4, 2, 0.2, 0.2, 0.2, 0.2, 2, 4, 9, 26, 130, 1000];
-                    this.weights = [0.0001, 0.0005, 0.005, 0.03, 0.10, 0.20, 0.3322, 0.3322, 0.3322, 0.3322, 0.20, 0.10, 0.03, 0.005, 0.0005, 0.0001]; // Very rare extremes
-                }
-                this.updateSlots();
-            }
-            
-            updateRows(rows) {
-                this.rows = parseInt(rows);
-                document.getElementById('rowsDisplay').textContent = rows;
-                this.drawBoard();
-            }
-            
-            updateSlots() {
-                const slots = document.getElementById('plinkoSlots');
-                slots.innerHTML = '';
-                
-                const visibleMultipliers = this.multipliers.slice(0, this.rows);
-                const slotWidth = 100 / visibleMultipliers.length;
-                
-                visibleMultipliers.forEach((m, i) => {
-                    const slot = document.createElement('div');
-                    slot.className = 'plinko-slot';
-                    slot.style.width = slotWidth + '%';
-                    slot.dataset.index = i;
-                    
-                    if (m >= 10) slot.classList.add('high');
-                    else if (m >= 1) slot.classList.add('mid');
-                    else slot.classList.add('low');
-                    
-                    slot.textContent = m + '×';
-                    slots.appendChild(slot);
-                });
-            }
-            
-            drawBoard() {
-                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                
-                this.ctx.fillStyle = 'rgba(201, 162, 39, 0.5)';
-                const pegRadius = 4;
-                const startY = 80;
-                const spacingX = this.canvas.width / (this.rows + 2);
-                const spacingY = (this.canvas.height - 100) / this.rows;
-                
-                for (let row = 0; row < this.rows; row++) {
-                    for (let col = 0; col <= row; col++) {
-                        const x = this.canvas.width / 2 - (row * spacingX) / 2 + col * spacingX;
-                        const y = startY + row * spacingY;
-                        this.ctx.beginPath();
-                        this.ctx.arc(x, y, pegRadius, 0, Math.PI * 2);
-                        this.ctx.fill();
-                    }
-                }
-            }
-            
-            async action() {
-                if (this.isPlaying) return;
-                
-                const amount = parseFloat(document.getElementById('betInput').value);
-                if (!this.placeBet(amount)) return;
-                
-                this.isPlaying = true;
-                document.getElementById('actionBtn').disabled = true;
-                
-                // Weighted random selection based on difficulty
-                const rand = await this.getRandom();
-                let cumulative = 0;
-                let slotIndex = 0;
-                
-                for (let i = 0; i < this.weights.length; i++) {
-                    cumulative += this.weights[i];
-                    if (rand <= cumulative) {
-                        slotIndex = i;
-                        break;
-                    }
-                }
-                
-                // Map to actual position (center bias in visualization)
-                const multiplier = this.multipliers[slotIndex];
-                
-                await this.animateBall(slotIndex);
-                
-                const slots = document.querySelectorAll('.plinko-slot');
-                if (slots[slotIndex]) {
-                    slots[slotIndex].classList.add('active');
-                    setTimeout(() => slots[slotIndex].classList.remove('active'), 1000);
-                }
-                
-                const winAmount = this.betAmount * multiplier;
-                
-                if (multiplier > 1) {
-                    this.win(winAmount);
-                    if (multiplier >= 10) {
-                        Toast.show(`RARE HIT! ${multiplier}×! Won ${formatCurrency(winAmount)}`, 'success');
-                        showWinCelebration(`${multiplier}× MULTIPLIER!`, formatCurrency(winAmount));
-                    }
-                } else {
-                    this.loss();
-                    Toast.show(`${multiplier}× - Unlucky!`, 'info');
-                }
-                
-                this.isPlaying = false;
-                document.getElementById('actionBtn').disabled = false;
-            }
-            
-            async animateBall(targetSlot) {
-                const ball = { x: this.canvas.width / 2, y: 20 };
-                const spacingX = this.canvas.width / (this.rows + 2);
-                const startY = 80;
-                const spacingY = (this.canvas.height - 100) / this.rows;
-                
-                return new Promise(resolve => {
-                    let currentRow = 0;
-                    let currentCol = Math.floor(this.rows / 2);
-                    
-                    const animate = () => {
-                        this.drawBoard();
-                        
-                        this.ctx.fillStyle = '#c9a227';
-                        this.ctx.shadowBlur = 15;
-                        this.ctx.shadowColor = '#c9a227';
-                        this.ctx.beginPath();
-                        this.ctx.arc(ball.x, ball.y, 8, 0, Math.PI * 2);
-                        this.ctx.fill();
-                        this.ctx.shadowBlur = 0;
-                        
-                        if (currentRow < this.rows) {
-                            const targetX = this.canvas.width / 2 - (currentRow * spacingX) / 2 + currentCol * spacingX;
-                            const targetY = startY + currentRow * spacingY;
-                            
-                            ball.x += (targetX - ball.x) * 0.3;
-                            ball.y += (targetY - ball.y) * 0.3;
-                            
-                            if (Math.abs(ball.y - targetY) < 5) {
-                                currentRow++;
-                                // Bias toward target slot
-                                const targetCol = targetSlot - (this.rows / 2) + currentRow;
-                                if (currentCol < targetCol && Math.random() > 0.3) currentCol++;
-                                else if (currentCol > targetCol && Math.random() > 0.3) currentCol--;
-                                else if (Math.random() > 0.5) currentCol += Math.random() > 0.5 ? 1 : -1;
-                            }
-                            
-                            requestAnimationFrame(animate);
-                        } else {
-                            ball.y += 8;
-                            if (ball.y < this.canvas.height - 40) {
-                                requestAnimationFrame(animate);
-                            } else {
-                                resolve();
-                            }
-                        }
-                    };
-                    
-                    animate();
-                });
-            }
-        }
-
-        // ============================================
-        // SPORTS & MINI GAMES
-        // ============================================
-        
-        // Ping Pong vs Bot
-        class PingPongGame extends BaseGame {
-            constructor() {
-                super('Ping Pong');
-                this.playerScore = 0;
-                this.botScore = 0;
-                this.targetScore = 11;
-                this.speed = 1;
-            }
-            
-            getHouseEdge() { return 5; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        ${this.getControlTemplate()}
-                        <div class="panel-section">
-                            <div class="section-label">First to 11 wins 2×</div>
-                            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">
-                                Speed increases over time. Beat the bot!
-                            </div>
-                        </div>
-                        <div class="panel-section">
-                            <div class="section-label">Difficulty</div>
-                            <select class="bet-input" id="ppDiff">
-                                <option value="easy">Easy (Bot slows down)</option>
-                                <option value="medium" selected>Medium</option>
-                                <option value="hard">Hard (Bot speeds up)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="stage">
-                        <div style="background: var(--bg-secondary); border-radius: 20px; padding: 40px; border: 2px solid var(--gold-primary);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; font-size: 48px; font-family: Cinzel;">
-                                <div style="color: #2ecc71;">You: <span id="ppPlayer">0</span></div>
-                                <div style="color: #e74c3c;">Bot: <span id="ppBot">0</span></div>
-                            </div>
-                            <canvas id="ppCanvas" width="600" height="400" style="background: #0a0a0b; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1);"></canvas>
-                            <div style="text-align: center; margin-top: 20px; color: var(--text-secondary);" id="ppStatus">Click BET to start match</div>
-                        </div>
-                    </div>
-                `;
-                
-                this.canvas = document.getElementById('ppCanvas');
-                this.ctx = this.canvas.getContext('2d');
-                this.drawTable();
-            }
-            
-            drawTable() {
-                this.ctx.fillStyle = '#0a0a0b';
-                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-                
-                // Net
-                this.ctx.strokeStyle = 'rgba(255,255,255,0.2)';
-                this.ctx.setLineDash([5, 5]);
-                this.ctx.beginPath();
-                this.ctx.moveTo(this.canvas.width/2, 0);
-                this.ctx.lineTo(this.canvas.width/2, this.canvas.height);
-                this.ctx.stroke();
-                this.ctx.setLineDash([]);
-            }
-            
-            async action() {
-                if (this.isPlaying) return;
-                
-                const amount = parseFloat(document.getElementById('betInput').value);
-                if (!this.placeBet(amount)) return;
-                
-                this.isPlaying = true;
-                this.playerScore = 0;
-                this.botScore = 0;
-                this.speed = 1;
-                
-                document.getElementById('actionBtn').disabled = true;
-                this.updateScore();
-                
-                this.playMatch();
-            }
-            
-            async playMatch() {
-                const diff = document.getElementById('ppDiff').value;
-                const winChance = diff === 'easy' ? 0.6 : diff === 'medium' ? 0.5 : 0.4;
-                
-                while (this.playerScore < this.targetScore && this.botScore < this.targetScore) {
-                    document.getElementById('ppStatus').textContent = 'Playing point...';
-                    
-                    // Animate point
-                    await this.animatePoint();
-                    
-                    // Determine winner (biased by difficulty)
-                    const rand = await this.getRandom();
-                    const playerWins = rand < winChance;
-                    
-                    if (playerWins) {
-                        this.playerScore++;
-                        document.getElementById('ppStatus').textContent = 'Point won!';
-                    } else {
-                        this.botScore++;
-                        document.getElementById('ppStatus').textContent = 'Point lost!';
-                    }
-                    
-                    this.updateScore();
-                    this.speed += 0.1; // Speed up over time
-                    
-                    await new Promise(r => setTimeout(r, 500));
-                }
-                
-                if (this.playerScore >= this.targetScore) {
-                    const winAmount = this.betAmount * 2;
-                    this.win(winAmount);
-                    Toast.show(`Victory! ${this.playerScore}-${this.botScore}`, 'success');
-                    document.getElementById('ppStatus').textContent = 'WINNER! 2× payout';
-                } else {
-                    this.loss();
-                    Toast.show(`Defeated ${this.playerScore}-${this.botScore}`, 'error');
-                    document.getElementById('ppStatus').textContent = 'Better luck next time!';
-                }
-                
-                this.isPlaying = false;
-                document.getElementById('actionBtn').disabled = false;
-            }
-            
-            async animatePoint() {
-                // Simple animation of ball going back and forth
-                const ctx = this.ctx;
-                let x = this.canvas.width / 2;
-                let y = this.canvas.height / 2;
-                let dx = 5 * this.speed;
-                let dy = 3 * this.speed;
-                
-                return new Promise(resolve => {
-                    const animate = () => {
-                        this.drawTable();
-                        
-                        // Draw paddles
-                        ctx.fillStyle = '#2ecc71';
-                        ctx.fillRect(10, y - 30, 10, 60);
-                        ctx.fillStyle = '#e74c3c';
-                        ctx.fillRect(this.canvas.width - 20, y - 30, 10, 60);
-                        
-                        // Ball
-                        ctx.fillStyle = '#fff';
-                        ctx.beginPath();
-                        ctx.arc(x, y, 8, 0, Math.PI * 2);
-                        ctx.fill();
-                        
-                        x += dx;
-                        y += dy;
-                        
-                        if (y < 0 || y > this.canvas.height) dy *= -1;
-                        
-                        if (x < 0 || x > this.canvas.width) {
-                            resolve();
-                            return;
-                        }
-                        
-                        requestAnimationFrame(animate);
-                    };
-                    animate();
-                });
-            }
-            
-            updateScore() {
-                document.getElementById('ppPlayer').textContent = this.playerScore;
-                document.getElementById('ppBot').textContent = this.botScore;
-            }
-        }
-
-        // Boxing Betting (Quick fights)
-        class BoxingGame extends BaseGame {
-            constructor() {
-                super('Boxing');
-                this.fighters = [
-                    { name: 'Iron Fist', odds: 1.5, color: '#e74c3c' },
-                    { name: 'Golden Glove', odds: 2.8, color: '#f39c12' },
-                    { name: 'The Tank', odds: 1.8, color: '#2ecc71' },
-                    { name: 'Ghost Pepper', odds: 3.5, color: '#9b59b6' }
-                ];
-                this.selectedFighter = null;
-            }
-            
-            getHouseEdge() { return 6; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        ${this.getControlTemplate()}
-                        <div class="panel-section">
-                            <div class="section-label">Select Fighter</div>
-                            <div id="fighterList" style="display: flex; flex-direction: column; gap: 10px;"></div>
-                        </div>
-                        <div class="panel-section">
-                            <div class="section-label">Fight Duration: <span class="text-gold">30 seconds</span></div>
-                        </div>
-                    </div>
-                    <div class="stage">
-                        <div style="text-align: center; max-width: 600px;">
-                            <div id="fightDisplay" style="background: var(--bg-secondary); padding: 40px; border-radius: 20px; border: 2px solid var(--gold-primary); margin-bottom: 20px;">
-                                <div style="font-size: 24px; color: var(--text-secondary); margin-bottom: 20px;">NEXT FIGHT</div>
-                                <div style="display: flex; justify-content: space-around; align-items: center; font-size: 48px;">
-                                    <div id="redCorner" style="color: #e74c3c;">🥊</div>
-                                    <div style="font-size: 24px; color: var(--gold-primary);">VS</div>
-                                    <div id="blueCorner" style="color: #3498db;">🥊</div>
-                                </div>
-                                <div id="fightTimer" style="margin-top: 20px; font-size: 36px; font-family: Cinzel; color: var(--gold-primary);"></div>
-                            </div>
-                            <div id="fightLog" style="height: 200px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; text-align: left; font-family: monospace;"></div>
-                        </div>
-                    </div>
-                `;
-                
-                this.renderFighters();
-                this.pickRandomMatchup();
-            }
-            
-            renderFighters() {
-                const list = document.getElementById('fighterList');
-                this.fighters.forEach((f, i) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'input-btn';
-                    btn.style.cssText = `width: 100%; padding: 15px; text-align: left; border-left: 4px solid ${f.color};`;
-                    btn.innerHTML = `<span style="color: ${f.color}; font-weight: bold;">${f.name}</span> <span style="float: right; color: var(--gold-primary);">${f.odds}×</span>`;
-                    btn.onclick = () => this.selectFighter(i);
-                    list.appendChild(btn);
-                });
-            }
-            
-            selectFighter(index) {
-                this.selectedFighter = index;
-                document.querySelectorAll('#fighterList button').forEach((btn, i) => {
-                    btn.style.opacity = i === index ? '1' : '0.5';
-                    btn.style.border = i === index ? `2px solid ${this.fighters[i].color}` : '1px solid rgba(255,255,255,0.1)';
-                });
-            }
-            
-            pickRandomMatchup() {
-                const f1 = Math.floor(Math.random() * this.fighters.length);
-                let f2 = Math.floor(Math.random() * this.fighters.length);
-                while (f2 === f1) f2 = Math.floor(Math.random() * this.fighters.length);
-                
-                document.getElementById('redCorner').textContent = this.fighters[f1].name;
-                document.getElementById('redCorner').style.color = this.fighters[f1].color;
-                document.getElementById('blueCorner').textContent = this.fighters[f2].name;
-                document.getElementById('blueCorner').style.color = this.fighters[f2].color;
-                
-                this.currentMatchup = [f1, f2];
-            }
-            
-            async action() {
-                if (this.selectedFighter === null) {
-                    Toast.show('Select a fighter first!', 'error');
-                    return;
-                }
-                
-                const amount = parseFloat(document.getElementById('betInput').value);
-                if (!this.placeBet(amount)) return;
-                
-                document.getElementById('actionBtn').disabled = true;
-                const log = document.getElementById('fightLog');
-                log.innerHTML = '';
-                
-                // Fight simulation (30 seconds compressed to 3 seconds for gameplay)
-                const winner = await this.simulateFight(log);
-                
-                const playerWon = this.currentMatchup[winner] === this.selectedFighter;
-                const odds = this.fighters[this.selectedFighter].odds;
-                
-                if (playerWon) {
-                    const winAmount = this.betAmount * odds;
-                    this.win(winAmount);
-                    Toast.show(`KNOCKOUT! ${this.fighters[this.selectedFighter].name} wins!`, 'success');
-                } else {
-                    this.loss();
-                    Toast.show(`${this.fighters[this.currentMatchup[winner]].name} wins by TKO`, 'error');
-                }
-                
-                document.getElementById('actionBtn').disabled = false;
-                setTimeout(() => this.pickRandomMatchup(), 2000);
-            }
-            
-            async simulateFight(log) {
-                let redHealth = 100;
-                let blueHealth = 100;
-                let round = 1;
-                
-                const addLog = (msg) => {
-                    const div = document.createElement('div');
-                    div.textContent = msg;
-                    div.style.marginBottom = '5px';
-                    log.appendChild(div);
-                    log.scrollTop = log.scrollHeight;
-                };
-                
-                addLog(`Round ${round} begins!`);
-                
-                while (redHealth > 0 && blueHealth > 0 && round <= 3) {
-                    await new Promise(r => setTimeout(r, 300));
-                    
-                    const action = Math.random();
-                    if (action < 0.4) {
-                        const damage = Math.floor(Math.random() * 15) + 5;
-                        if (Math.random() < 0.5) {
-                            blueHealth -= damage;
-                            addLog(`👊 ${this.fighters[this.currentMatchup[0]].name} hits for ${damage}!`);
-                        } else {
-                            redHealth -= damage;
-                            addLog(`👊 ${this.fighters[this.currentMatchup[1]].name} hits for ${damage}!`);
-                        }
-                    } else if (action < 0.6) {
-                        addLog('💨 Dodge!');
-                    }
-                    
-                    if (redHealth <= 0) return 1;
-                    if (blueHealth <= 0) return 0;
-                    
-                    if (Math.random() < 0.1) {
-                        round++;
-                        if (round <= 3) addLog(`--- Round ${round} ---`);
-                    }
-                }
-                
-                // Decision
-                return redHealth > blueHealth ? 0 : 1;
-            }
-        }
-
-        // F1 Racing (Short betting)
-        class F1Game extends BaseGame {
-            constructor() {
-                super('F1 Racing');
-                this.drivers = [
-                    { name: 'Verstappen', odds: 1.4, color: '#1e41ff' },
-                    { name: 'Hamilton', odds: 2.2, color: '#00d2be' },
-                    { name: 'Leclerc', odds: 3.0, color: '#dc0000' },
-                    { name: 'Perez', odds: 4.5, color: '#1e41ff' },
-                    { name: 'Russell', odds: 5.0, color: '#00d2be' },
-                    { name: 'Sainz', odds: 6.0, color: '#dc0000' }
-                ];
-                this.selectedDriver = null;
-            }
-            
-            getHouseEdge() { return 7; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        ${this.getControlTemplate()}
-                        <div class="panel-section">
-                            <div class="section-label">Select Driver (Top 3 finish)</div>
-                            <div id="driverList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"></div>
-                        </div>
-                    </div>
-                    <div class="stage">
-                        <div style="width: 100%; max-width: 800px;">
-                            <div style="background: var(--bg-secondary); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                                <div style="display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 12px; margin-bottom: 10px;">
-                                    <span>START</span>
-                                    <span>FINISH</span>
-                                </div>
-                                <div id="raceTrack" style="position: relative; height: 200px; background: linear-gradient(90deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%); border-radius: 5px; overflow: hidden;">
-                                    <div style="position: absolute; right: 10px; top: 0; bottom: 0; width: 4px; background: #fff; opacity: 0.5;"></div>
-                                    <!-- Cars generated here -->
-                                </div>
-                            </div>
-                            <div id="raceResults" style="text-align: center; font-size: 24px; color: var(--gold-primary);"></div>
-                        </div>
-                    </div>
-                `;
-                
-                this.renderDrivers();
-            }
-            
-            renderDrivers() {
-                const list = document.getElementById('driverList');
-                this.drivers.forEach((d, i) => {
-                    const btn = document.createElement('button');
-                    btn.className = 'input-btn';
-                    btn.style.borderLeft = `3px solid ${d.color}`;
-                    btn.innerHTML = `${d.name} <span style="color: var(--gold-primary); float: right;">${d.odds}×</span>`;
-                    btn.onclick = () => this.selectDriver(i);
-                    list.appendChild(btn);
-                });
-            }
-            
-            selectDriver(index) {
-                this.selectedDriver = index;
-                document.querySelectorAll('#driverList button').forEach((btn, i) => {
-                    btn.style.opacity = i === index ? '1' : '0.5';
-                });
-            }
-            
-            async action() {
-                if (this.selectedDriver === null) {
-                    Toast.show('Select a driver!', 'error');
-                    return;
-                }
-                
-                const amount = parseFloat(document.getElementById('betInput').value);
-                if (!this.placeBet(amount)) return;
-                
-                document.getElementById('actionBtn').disabled = true;
-                
-                // Setup race
-                const track = document.getElementById('raceTrack');
-                track.innerHTML = '<div style="position: absolute; right: 10px; top: 0; bottom: 0; width: 4px; background: #fff; opacity: 0.5;"></div>';
-                
-                const cars = this.drivers.map((d, i) => ({
-                    driver: d,
-                    position: 0,
-                    speed: 0,
-                    element: document.createElement('div')
-                }));
-                
-                cars.forEach((car, i) => {
-                    car.element.style.cssText = `position: absolute; left: 10px; top: ${20 + i * 30}px; width: 30px; height: 20px; background: ${car.driver.color}; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: white; transition: left 0.1s;`;
-                    car.element.textContent = i + 1;
-                    track.appendChild(car.element);
-                });
-                
-                // Race simulation (3 laps compressed)
-                document.getElementById('raceResults').textContent = 'RACE STARTED!';
-                
-                for (let lap = 1; lap <= 3; lap++) {
-                    while (Math.max(...cars.map(c => c.position)) < 100) {
-                        cars.forEach(car => {
-                            car.speed += (Math.random() - 0.3) * 2; // Random acceleration
-                            car.speed = Math.max(0, Math.min(car.speed, 5));
-                            car.position += car.speed * 0.5;
-                            car.element.style.left = (10 + car.position * 7) + 'px';
-                        });
-                        
-                        await new Promise(r => setTimeout(r, 50));
-                    }
-                    
-                    cars.forEach(c => c.position = 0); // Reset for next lap visual
-                }
-                
-                // Determine results (weighted by odds - lower odds = higher chance)
-                const results = [...cars].sort((a, b) => {
-                    const aProb = 1 / a.driver.odds;
-                    const bProb = 1 / b.driver.odds;
-                    return (Math.random() * bProb) - (Math.random() * aProb);
-                });
-                
-                // Animate finish
-                results.forEach((car, pos) => {
-                    car.element.style.left = '90%';
-                    setTimeout(() => {
-                        car.element.style.top = (20 + pos * 30) + 'px';
-                    }, pos * 200);
-                });
-                
-                const winnerIndex = this.drivers.indexOf(results[0].driver);
-                const playerWon = winnerIndex === this.selectedDriver || 
-                                 results.slice(0, 3).some(r => this.drivers.indexOf(r.driver) === this.selectedDriver);
-                
-                const odds = this.drivers[this.selectedDriver].odds;
-                
-                setTimeout(() => {
-                    if (playerWon) {
-                        const winAmount = this.betAmount * odds;
-                        this.win(winAmount);
-                        document.getElementById('raceResults').textContent = `PODIUM FINISH! ${odds}×`;
-                        Toast.show(`${this.drivers[this.selectedDriver].name} finished top 3!`, 'success');
-                    } else {
-                        this.loss();
-                        document.getElementById('raceResults').textContent = 'DNF - Better luck next race';
-                        Toast.show('Finished outside top 3', 'error');
-                    }
-                    
-                    document.getElementById('actionBtn').disabled = false;
-                }, 2000);
-            }
-        }
-
-        // ============================================
-        // CASE OPENING SYSTEM (High Tier)
-        // ============================================
-        class CasesGame extends BaseGame {
-            constructor() {
-                super('Cases');
-                this.cases = [
-                    { name: 'Construction Crate', price: 1000, items: [
-                        { name: 'Rusty Nail', value: 100, chance: 0.5, color: '#95a5a6' },
-                        { name: 'Hard Hat', value: 500, chance: 0.3, color: '#f39c12' },
-                        { name: 'Golden Hammer', value: 5000, chance: 0.15, color: '#f1c40f' },
-                        { name: 'Diamond Drill', value: 50000, chance: 0.04, color: '#3498db' },
-                        { name: 'Legendary Blueprint', value: 1000000, chance: 0.01, color: '#9b59b6' }
-                    ]},
-                    { name: 'Future Tech', price: 1000000, items: [
-                        { name: 'Nano Chip', value: 100000, chance: 0.5, color: '#2ecc71' },
-                        { name: 'Plasma Core', value: 500000, chance: 0.3, color: '#e74c3c' },
-                        { name: 'Quantum Drive', value: 5000000, chance: 0.15, color: '#00d2ff' },
-                        { name: 'AI Consciousness', value: 50000000, chance: 0.04, color: '#ff00ff' },
-                        { name: 'Dyson Sphere Plans', value: 1000000000, chance: 0.01, color: '#ffd700' }
-                    ]}
-                ];
-                this.selectedCase = 0;
-            }
-            
-            getHouseEdge() { return 15; }
-            
-            async init() {
-                this.container.innerHTML = `
-                    <div class="control-panel">
-                        <div class="panel-section">
-                            <div class="section-label">Select Case</div>
-                            <select class="bet-input" id="caseSelect" onchange="Games.current.selectCase(this.value)">
-                                ${this.cases.map((c, i) => `<option value="${i}">${c.name} ($${c.price.toLocaleString()})</option>`).join('')}
-                            </select>
-                        </div>
-                        <div class="panel-section">
-                            <div class="section-label">Case Contents</div>
-                            <div id="caseContents" style="font-size: 12px;"></div>
-                        </div>
-                        <button class="action-btn" id="openCaseBtn" onclick="Games.current.openCase()">OPEN CASE</button>
-                    </div>
-                    <div class="stage">
-                        <div style="width: 100%; max-width: 800px; background: var(--bg-secondary); padding: 40px; border-radius: 20px; border: 2px solid var(--gold-primary);">
-                            <div style="height: 100px; background: rgba(0,0,0,0.3); border-radius: 10px; overflow: hidden; position: relative; margin-bottom: 20px;">
-                                <div id="caseSpinner" style="display: flex; position: absolute; left: 50%; transition: none;"></div>
-                                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: var(--gold-primary); transform: translateX(-50%); z-index: 10;"></div>
-                            </div>
-                            <div id="caseResult" style="text-align: center; font-size: 24px; font-weight: 600; min-height: 40px;"></div>
-                        </div>
-                    </div>
-                `;
-                
-                this.showCaseContents();
-            }
-            
-            selectCase(idx) {
-                this.selectedCase = parseInt(idx);
-                this.showCaseContents();
-            }
-            
-            showCaseContents() {
-                const c = this.cases[this.selectedCase];
-                const div = document.getElementById('caseContents');
-                div.innerHTML = c.items.map(i => `
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: ${i.color};">
-                        <span>${i.name}</span>
-                        <span>${(i.chance * 100).toFixed(1)}%</span>
-                    </div>
-                `).join('');
-            }
-            
-            async openCase() {
-                const c = this.cases[this.selectedCase];
-                
-                // Override bet amount with case price
-                if (!this.placeBet(c.price)) return;
-                
-                document.getElementById('openCaseBtn').disabled = true;
-                
-                // Weighted random
-                const rand = await this.getRandom();
-                let cumulative = 0;
-                let wonItem = c.items[0];
-                
-                for (const item of c.items) {
-                    cumulative += item.chance;
-                    if (rand <= cumulative) {
-                        wonItem = item;
-                        break;
-                    }
-                }
-                
-                // Animation
-                const spinner = document.getElementById('caseSpinner');
-                spinner.innerHTML = '';
-                
-                // Create random sequence ending with winner
-                const sequence = [];
-                for (let i = 0; i < 20; i++) {
-                    const randomItem = c.items[Math.floor(Math.random() * c.items.length)];
-                    sequence.push(randomItem);
-                }
-                sequence.push(wonItem);
-                
-                sequence.forEach((item, i) => {
-                    const div = document.createElement('div');
-                    div.style.cssText = `min-width: 100px; height: 100px; background: ${item.color}; margin-right: 5px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; font-weight: bold;`;
-                    div.textContent = item.name;
-                    spinner.appendChild(div);
-                });
-                
-                // Spin animation
-                spinner.style.transition = 'left 3s cubic-bezier(0.25, 0.1, 0.25, 1)';
-                spinner.style.left = '-2100px';
-                
-                setTimeout(() => {
-                    document.getElementById('caseResult').innerHTML = `
-                        <div style="color: ${wonItem.color}; font-size: 32px; margin-bottom: 10px;">${wonItem.name}</div>
-                        <div style="color: var(--gold-primary);">Worth: $${wonItem.value.toLocaleString()}</div>
-                    `;
-                    
-                    if (wonItem.value > c.price) {
-                        State.updateBalance(wonItem.value);
-                        State.recordBet('Cases', c.price, wonItem.value);
-                        Toast.show(`Unboxed ${wonItem.name}!`, 'success');
-                        if (wonItem.value > c.price * 10) {
-                            showWinCelebration('INSANE UNBOXING!', formatCurrency(wonItem.value));
-                        }
-                    } else {
-                        State.recordBet('Cases', c.price, 0);
-                        Toast.show('Unlucky...', 'info');
-                    }
-                    
-                    document.getElementById('openCaseBtn').disabled = false;
-                    spinner.style.transition = 'none';
-                    spinner.style.left = '50%';
-                }, 3000);
-            }
-            
-            action() {} // Not used, we use openCase
-        }
-
-        // ============================================
-        // UPDATE GAMES MANAGER
-        // ============================================
-        Games.launch = async function(gameName) {
-            if (this.current) {
-                // Cleanup
-            }
-            
-            document.getElementById('lobby').style.display = 'none';
-            document.getElementById('gameView').classList.add('active');
-            
-            if (!this.instances[gameName]) {
-                const gameClasses = {
-                    'crash': CrashGame,
-                    'mines': MinesGame,
-                    'plinko': PlinkoGame,
-                    'limbo': LimboGame,
-                    'dice': DiceGame,
-                    'hilo': HiLoGame,
-                    'keno': KenoGame,
-                    'wheel': WheelGame,
-                    'dragontower': DragonTowerGame,
-                    'coinflip': CoinFlipGame,
-                    'slide': SlideGame,
-                    'towers': TowersGame,
-                    'roulette': RouletteGame,
-                    'blackjack': BlackjackGame,
-                    'baccarat': BaccaratGame,
-                    'slots': HuffPuffGame, // REPLACED with Huff & Puff
-                    'poker': PokerGame,
-                    'war': WarGame,
-                    'pingpong': PingPongGame,
-                    'boxing': BoxingGame,
-                    'f1': F1Game,
-                    'cases': CasesGame
-                };
-                
-                const GameClass = gameClasses[gameName];
-                if (GameClass) {
-                    this.instances[gameName] = new GameClass();
-                }
-            }
-            
-            this.current = this.instances[gameName];
-            if (this.current) {
-                await this.current.init();
-                ProvablyFair.init();
-            }
-        };
-
-        // ============================================
-        // UPDATED LOBBY WITH NEW GAMES
-        // ============================================
-        const originalShowLobby = showLobby;
-        showLobby = function() {
-            document.getElementById('gameView').classList.remove('active');
-            document.getElementById('lobby').style.display = 'block';
-            Games.current = null;
-        };
-
-        // Add Shop to header
-        const headerActions = document.querySelector('.header-actions');
-        const shopBtn = document.createElement('button');
-        shopBtn.className = 'icon-btn';
-        shopBtn.innerHTML = '🏪';
-        shopBtn.onclick = () => toggleShop();
-        headerActions.insertBefore(shopBtn, headerActions.lastChild);
-
-        function toggleShop() {
-            // Create shop modal if doesn't exist
-            let modal = document.getElementById('shopModal');
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.id = 'shopModal';
-                modal.className = 'modal-overlay';
-                modal.innerHTML = `
-                    <div class="modal">
-                        <div class="modal-header">
-                            <div class="modal-title">Sovereign Shop</div>
-                            <button class="modal-close" onclick="document.getElementById('shopModal').classList.remove('visible')">×</button>
-                        </div>
-                        <div id="shopContent">
-                            <div style="margin-bottom: 20px; padding: 15px; background: rgba(201,162,39,0.1); border-radius: 10px;">
-                                <div style="font-size: 12px; color: var(--text-secondary);">Your Balance</div>
-                                <div style="font-size: 24px; color: var(--gold-primary); font-family: Cinzel;" id="shopBalance">$0</div>
-                            </div>
-                            <div class="section-title">Themes</div>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
-                                ${Shop.items.filter(i => i.type === 'theme').map(item => `
-                                    <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                                        <div style="font-size: 32px; margin-bottom: 10px;">${item.icon}</div>
-                                        <div style="font-weight: 600; margin-bottom: 5px;">${item.name}</div>
-                                        <div style="color: var(--gold-primary); margin-bottom: 15px;">$${item.price.toLocaleString()}</div>
-                                        <button class="input-btn" style="width: 100%;" onclick="Shop.buy('${item.id}'); document.getElementById('shopBalance').textContent = formatCurrency(Auth.currentUser ? Auth.currentUser.balance : State.balance);" ${Shop.isOwned(item.id) ? 'disabled' : ''}>
-                                            ${Shop.isOwned(item.id) ? 'Owned' : 'Buy'}
-                                        </button>
-                                    </div>
-                                `).join('')}
-                            </div>
-                            <div class="section-title">Badges</div>
-                            <div id="badgeDisplay" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                                ${BadgeSystem.getUnlocked().map(b => `
-                                    <div style="padding: 10px 20px; background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark)); color: #000; border-radius: 20px; font-weight: 600;">
-                                        ${b.icon} ${b.name}
-                                    </div>
-                                `).join('') || '<span style="color: var(--text-secondary);">Play games to unlock badges!</span>'}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                document.body.appendChild(modal);
-            }
-            
-            document.getElementById('shopBalance').textContent = formatCurrency(Auth.currentUser ? Auth.currentUser.balance : State.balance);
-            modal.classList.toggle('visible');
-        }
-
-        // ============================================
-        // MOVING BACKGROUND ANIMATION
-        // ============================================
-        function initMovingBackground() {
-            const bg = document.getElementById('ambientBg');
-            let mouseX = 0;
-            let mouseY = 0;
-            let currentX = 0;
-            let currentY = 0;
-            
-            document.addEventListener('mousemove', (e) => {
-                mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
-                mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
-            });
-            
-            function animate() {
-                currentX += (mouseX - currentX) * 0.05;
-                currentY += (mouseY - currentY) * 0.05;
-                
-                bg.style.transform = `translate(${currentX}px, ${currentY}px)`;
-                requestAnimationFrame(animate);
-            }
-            animate();
-            
-            // Subtle auto-movement when idle
-            setInterval(() => {
-                if (Math.abs(mouseX) < 1) {
-                    mouseX = Math.sin(Date.now() / 2000) * 10;
-                    mouseY = Math.cos(Date.now() / 2000) * 10;
-                }
-            }, 100);
-        }
-
-        // ============================================
-        // FINAL INITIALIZATION
-        // ============================================
-        window.onload = function() {
-            // Loading animation
-            let progress = 0;
-            const progressInterval = setInterval(() => {
-                progress += Math.random() * 15;
-                if (progress >= 100) {
-                    progress = 100;
-                    clearInterval(progressInterval);
-                    
-                    setTimeout(() => {
-                        document.getElementById('loader').style.opacity = '0';
-                        setTimeout(() => {
-                            document.getElementById('loader').style.display = 'none';
-                        }, 800);
-                    }, 500);
-                }
-                document.getElementById('progressFill').style.width = progress + '%';
-            }, 200);
-            
-            // Create ambient particles
-            const ambientBg = document.getElementById('ambientBg');
-            for (let i = 0; i < 20; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'ambient-particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                ambientBg.appendChild(particle);
-            }
-            
-            // Initialize systems
-            Auth.init();
-            ThemeManager.loadSaved();
-            updateClaimTimer();
-            initMovingBackground();
-            
-            // Add new game cards to lobby dynamically
-            const originalsSection = document.querySelector('.games-section:nth-child(2) .games-grid');
-            if (originalsSection) {
-                const newGames = [
-                    { id: 'pingpong', icon: '🏓', title: 'Ping Pong', desc: 'Face the bot. Speed increases! House edge: 5%', tag: 'new' },
-                    { id: 'cases', icon: '📦', title: 'Cases', desc: 'Open high-tier crates. Up to 1B value! House edge: 15%', tag: 'hot' }
-                ];
-                
-                newGames.forEach(game => {
-                    const card = document.createElement('div');
-                    card.className = 'game-card';
-                    card.onclick = () => launchGame(game.id);
-                    card.innerHTML = `
-                        <div class="game-tag ${game.tag}">${game.tag}</div>
-                        <div class="game-preview">${game.icon}</div>
-                        <div class="game-info">
-                            <h3 class="game-title">${game.title}</h3>
-                            <p class="game-desc">${game.desc}</p>
-                        </div>
-                    `;
-                    originalsSection.appendChild(card);
-                });
-            }
-            
-            // Add Sports section
-            const lobby = document.getElementById('lobby');
-            const sportsSection = document.createElement('div');
-            sportsSection.className = 'games-section';
-            sportsSection.innerHTML = `
-                <div class="section-title">⚽ Sports Arena</div>
-                <div class="games-grid">
-                    <div class="game-card" onclick="launchGame('boxing')">
-                        <div class="game-tag new">New</div>
-                        <div class="game-preview">🥊</div>
-                        <div class="game-info">
-                            <h3 class="game-title">Boxing</h3>
-                            <p class="game-desc">Pick your fighter. 30 second fights. House edge: 6%</p>
-                        </div>
-                    </div>
-                    <div class="game-card" onclick="launchGame('f1')">
-                        <div class="game-tag hot">Fast</div>
-                        <div class="game-preview">🏎️</div>
-                        <div class="game-info">
-                            <h3 class="game-title">F1 Racing</h3>
-                            <p class="game-desc">Bet on top 3 finishers. Quick 3-lap races. House edge: 7%</p>
-                        </div>
-                    </div>
-                    <div class="game-card" onclick="launchGame('pingpong')">
-                        <div class="game-preview">🏓</div>
-                        <div class="game-info">
-                            <h3 class="game-title">Ping Pong</h3>
-                            <p class="game-desc">Play vs Bot. Win 2× if you reach 11 first. House edge: 5%</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            // Insert before VIP section
-            const vipSection = document.querySelector('.games-section:last-child');
-            lobby.insertBefore(sportsSection, vipSection);
-            
-            // Fix stats panel position to far right
-            const statsPanel = document.getElementById('statsPanel');
-            statsPanel.style.right = '20px';
-            statsPanel.style.left = 'auto';
+            document.addEventListener('mouseup', () => isDragging = false);
         };
     </script>
-    
-    <style>
-        /* Additional styles for new features */
-        .huff-cell {
-            animation: huff-pop 0.3s ease;
-        }
-        
-        @keyframes huff-pop {
-            0% { transform: scale(0); opacity: 0; }
-            80% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); }
-        }
-        
-        /* Ensure stats panel closes properly */
-        .stats-panel:not(.visible) {
-            display: none !important;
-        }
-        
-        /* Moving background enhancement */
-        #ambientBg {
-            transition: transform 0.1s ease-out;
-        }
-        
-        /* Shop specific styles */
-        #shopModal .modal {
-            max-width: 700px;
-        }
-        
-        /* Sports animations */
-        @keyframes race-shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-2px); }
-            75% { transform: translateX(2px); }
-        }
-        
-        /* Ping pong paddle animation */
-        @keyframes paddle-hit {
-            0% { transform: scaleY(1); }
-            50% { transform: scaleY(0.8); }
-            100% { transform: scaleY(1); }
-        }
-    </style>
 </body>
 </html>
